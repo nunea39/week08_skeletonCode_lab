@@ -12,11 +12,11 @@ import java.util.Scanner;
  */
 public class Problem01 {
     
-    public static long getSumOfPrimes(int n){
+    public static long getSumOfPrimes(int num){
         
         int count,sum = 0;
         
-        for(int i =1; i <= n; i++){     //O(n)
+        for(int i =1; i <= num; i++){   //O(n)
             count=0;                    //O(1)
             for(int j=2; j<=i/2; j++){  //O(log n)
                 if(i%j == 0){           //O(1)
@@ -29,7 +29,7 @@ public class Problem01 {
             }
         }
         
-       //Time complexity is O(n log n)
+       //Time complexity is O(n*log n)
 
     // Todo 04: Develop a method that returns the sum of the prime numbers between 1 and n
     //          Test your solution
@@ -40,10 +40,10 @@ public class Problem01 {
     
     public static void main(String[] args){
         
-        int n = 100;
+        int num = 10;
         
-        System.out.println("The sum of prime numbers from 1 to " + n+ " is: " 
-                +getSumOfPrimes(n));
+        System.out.println("The sum of prime numbers from 1 to " + num+ " is: " 
+                +getSumOfPrimes(num));
     }
     
 }

@@ -15,7 +15,7 @@ public class BinarySearch {
         int index = Integer.MAX_VALUE;            //O(1)
 
         while (low <= high) {                     //O(n)
-            int mid = low + ((high - low) / 2);   //O(log n)
+            int mid = low + ((high - low) / 2);   //O(log2n)
             if (sortedArray[mid] < key) {         //O(1)
                 low = mid + 1;                    //O(1)
             } else if (sortedArray[mid] > key) {  //O(1)
@@ -27,6 +27,8 @@ public class BinarySearch {
         }
         return index;                             //O(1)
     }
+    //time complexity O(log2n)
+    
     //ToDo 2: Call the above method and test the algorithm  
     // provide time and space analysis 
     
